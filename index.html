@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Mary 💌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔐 LOGIN -->
+<div id="login" class="screen active">
+  <h2>Digite a senha 💌</h2>
+  <input type="password" id="password">
+  <button onclick="checkPassword()">Entrar</button>
+  <p id="error"></p>
+</div>
+
+<!-- 🎀 CAPA -->
+<div id="cover" class="screen">
+  <div class="card">
+    <div class="laco">🎀</div>
+    <div class="foto"></div>
+    <h2 class="nome">Mary 💌</h2>
+    <p class="texto">abre com carinho</p>
+    <button onclick="openBook()">Abrir</button>
+  </div>
+</div>
+
+<!-- 📖 LIVRO -->
+<div id="book" class="screen">
+
+  <div class="settings-btn" onclick="toggleSettings()">⚙️</div>
+
+  <div id="pages-container"></div>
+
+  <div class="controls">
+    <button onclick="prevPage()">⬅️</button>
+    <button onclick="nextPage()">➡️</button>
+  </div>
+
+</div>
+
+<!-- 🎨 POPUP -->
+<div id="settings" class="popup">
+  <div class="popup-box">
+    <h3>🎨 Personalizar</h3>
+
+    <p>Cor do livro</p>
+    <div class="colors">
+      <span onclick="setColor('#ffffff')" style="background:#fff"></span>
+      <span onclick="setColor('#ffe4e9')" style="background:#ffe4e9"></span>
+      <span onclick="setColor('#f5f5dc')" style="background:#f5f5dc"></span>
+    </div>
+
+    <p>Cor do texto</p>
+    <div class="colors">
+      <span onclick="setTextColor('#000')" style="background:#000"></span>
+      <span onclick="setTextColor('#444')" style="background:#444"></span>
+      <span onclick="setTextColor('#ff4d6d')" style="background:#ff4d6d"></span>
+    </div>
+
+    <button onclick="toggleSettings()">Fechar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
